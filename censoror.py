@@ -1,6 +1,3 @@
-#
-#
-#
 import sys
 import glob
 import assignment1.main as main
@@ -43,13 +40,9 @@ for paths in input_path:
         my_file = open(f, encoding = "ISO-8859-1")
         data = my_file.read()
         names_list = []
-        genders_list = []
-        gender_count = 0
         dates = []
         address_list = []
         phones_list = []
-        concept_list = []
-        concept_count = []
         #print(f)
         if n in flags:
             data, names_list = main.names(data)
