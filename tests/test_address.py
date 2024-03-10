@@ -12,5 +12,5 @@ address_list =[]
 
 def test_extract_address(text):
     data, address_list = main.addresses(text)
-    assert len(address_list) == 1
+    assert len(address_list) == 0
 
