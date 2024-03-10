@@ -68,7 +68,13 @@ def addresses(data):
 
 def phones(data):
     parsed_text = CommonRegex(data)
-    return data, parsed_text.phones
+    if not data:  # Check if data is empty
+        return data, [] 
+    phones_list = parsed_text.phones
+    #print(type(phones_list))
+#    for phone in phones_list:
+#        data = data.replace(phone, block)
+    return data, phones_list
 
 
 def redact(names_list, dates, address_list, phones_list, data):
