@@ -95,29 +95,29 @@ The `names` function extracts and returns a list of unique names identified as '
 ![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/5d3a2639-2cf0-487a-bf43-e0c500b413f8)
 
 ### `dates(text)`
-Identifies and extracts date expressions from the text. This function is capable of recognizing various date formats and normalizing them for consistent processing.
+The `dates` function identifies and collects date entities from the provided text data using spaCy's NLP tools. It scans the text for entities labeled as "DATE" and appends each found date to a list. The function returns the original text data along with the list of extracted date entities.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_dates.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/d67752e6-8716-4d63-b171-fe34e208b429)
 
 ### `addresses(text)`
-Detects and extracts physical address details from the text. The function looks for patterns that typically represent postal addresses to ensure that location data is redacted.
+The `addresses` function uses spaCy's Matcher to identify and extract potential address entities from the text data. It defines a custom pattern to match sequences that resemble addresses, such as a sequence of digits followed by street names and optional suffixes. The function then searches the text for matches to this pattern, extracts each found address, and adds it to a list. The original text and the list of extracted addresses are returned.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_address.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/a058891b-39f2-4c14-ad54-ff950c7228d2)
 
 ### `phones(text)`
-Finds and extracts phone numbers from the text. It can handle multiple phone number formats, making it robust against the varied ways phone numbers can be presented.
+The `phones` function extracts phone numbers from the input text using the CommonRegex library, which provides a convenient way to identify common patterns like phone numbers in text. The function parses the input data to find phone number patterns, populating a list with the extracted phone numbers. It returns the original data along with the list of phone numbers found. If the input data is empty, it returns an empty list for phone numbers.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_phone.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/419faef9-f2d0-4636-abdb-5ce48063fe43)
 
 ### `redact(names_list, dates, address_list, phone_numbers, text)`
-The redaction function takes lists of names, dates, addresses, and phone numbers along with the original text. It then redacts all occurrences of these sensitive pieces of information from the text.
+The `redact` function anonymizes the text data by replacing identified names, dates, addresses, and phone numbers with a block character. It concatenates all the elements from the provided lists into a single list and iterates over it, using a regular expression to replace each element in the text with a series of block characters equal in length to the element. This process effectively redacts sensitive information from the data, returning the redacted version of the text.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_redact.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/8cfe8b0a-1ef6-411f-b273-00e2d5f8d995)
 
 ### `stats(stats_path, file_name, entities)`
-Generates a statistical summary of the redaction process. This function logs details such as the count and types of terms redacted and can output this information to a file or stdout/stderr as defined by the user.
+The `stats` function generates a summary of the redaction process for a specific file. It calculates the total number of redacted items by summing the lengths of the names, dates, addresses, and phone numbers lists. The function then constructs a status report detailing the number of each type of entity redacted from the file. This report includes the total count of redacted items and individual counts for names, dates, addresses, and phone numbers, providing a clear overview of the redaction results.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_stats.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/5a63489c-ae08-407c-b47b-6c6dd70a74d8)
 
 
 ## 2. censoror.py
