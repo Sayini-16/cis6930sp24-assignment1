@@ -1,6 +1,6 @@
-## CIS 6930, Spring 2024 Assignment 1
+## Assignment 1 - CIS 6930 Spring 2024 
 
-## Author: Rohith Sadam
+## Author: Anirudh Sayini
 
 ## The Censoror
 
