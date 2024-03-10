@@ -14,7 +14,7 @@ phone_number=[]
 
 
 def test_extract_phone(text):
-    phone_list = main.phones(text)
+    data, phone_list = main.phones(text)
     assert len(phone_list) == 0
 
 
