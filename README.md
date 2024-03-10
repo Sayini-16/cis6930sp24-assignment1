@@ -122,10 +122,16 @@ The `stats` function generates a summary of the redaction process for a specific
 
 ## 2. censoror.py
 
-![SS1](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/censoror.png)
+The censor.pyis designed to redact sensitive information from text files based on specified criteria. It processes a set of files, identifies and redacts names, dates, addresses, and phone numbers, and generates a summary of the redaction. Here's a breakdown of its main components:
 
-## Description
-The `censoror.py` script is a command-line utility that forms the core of the data censoring system. It is designed to read in text files, apply specified redaction rules to censor sensitive information like names, dates, addresses, and phone numbers, and then output the redacted files to a designated directory.
+1. **Initialization:** Clears or creates a stats.txt file to store redaction summaries and initializes various lists to manage arguments and data.
+2. **Argument Parsing:** Extracts command line arguments to determine input files, output destination, stats file path, and specific redaction flags (names, dates, addresses, phones).
+3. **File Processing:** Iterates over the specified input files, reading and processing each one to identify and redact the specified types of information.
+4. **Redaction and Summary:** For each file, it calls the `main` module's functions to detect and redact the specified information types, then updates the stats file with a summary of the actions taken.
+5. **Output Generation:** Writes the redacted content to new files in the specified output directory, appending `.censored` to the original filenames.
+
+This script automates the redaction process, ensuring sensitive information is anonymized before further processing or sharing of the text files.
+![SS1](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/6f4dd789-f403-4be1-b4be-9a53db7e7fa4)
 
 ## Usage
 To use the script, you must provide command-line arguments to define the input files, output directory, and what types of data to censor. The flags used for specifying these parameters include `--input`, `--output`, and `--stats`.
