@@ -85,17 +85,14 @@ The projects have below files:
 
 ## 1. main.py
  
-main.py is imported into assignment1.py file and below mentioned functions will be executed by function calling. The URL will be accepted as an input argument.
+This main.py utilizes NLTK and spaCy libraries to identify and redact personal information from text data. It processes text to find names, dates, addresses, and phone numbers, then replaces them with blocks for redaction. It also generates a summary of the redactions performed. The script demonstrates the integration of regular expressions, spaCy's NLP capabilities, and NLTK's text processing features for data anonymization.
 
-## Overview
-The `main.py` file contains core functions essential for the operation of the data censoring system. Each function is designed to handle a specific aspect of the text processing and redaction pipeline.
-
-## Functions
+### Functions
 
 ### `names(text)`
-Extracts potential names from the provided text. It uses natural language processing techniques to identify proper nouns or titles that may refer to individuals.
+The `names` function extracts and returns a list of unique names identified as 'PERSON' entities in the provided text data using spaCy's natural language processing capabilities. It processes the text, identifies named entities, filters them by the 'PERSON' label, and appends each unique name to a list, which is then returned along with the original data.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/main_names.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/5d3a2639-2cf0-487a-bf43-e0c500b413f8)
 
 ### `dates(text)`
 Identifies and extracts date expressions from the text. This function is capable of recognizing various date formats and normalizing them for consistent processing.
