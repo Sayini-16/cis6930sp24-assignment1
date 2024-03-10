@@ -71,9 +71,6 @@ def phones(data):
     if not data:  # Check if data is empty
         return data, [] 
     phones_list = parsed_text.phones
-    #print(type(phones_list))
-#    for phone in phones_list:
-#        data = data.replace(phone, block)
     return data, phones_list
 
 
@@ -90,12 +87,5 @@ def stats(names_list, dates, address_list, phones_list, f):
     status += f"The following number of addresses are redacted from the file {len(address_list)} \n"
     status += f"The following number of phones are redacted from the file {len(phones_list)} \n"
     status += f"The total number of redactions in the file are {total} \n"
-
-   
-    # if stats_list[0] == 'stderr':
-    #     sys.stderr.write(status)
-    # # else:
-    # #     with open("stats.txt", 'a', encoding="utf-8") as file:
-    # #         file.write(status)
 
     return status
