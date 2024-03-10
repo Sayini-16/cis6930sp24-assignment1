@@ -145,6 +145,9 @@ Additional flags are used to indicate which types of sensitive information shoul
 
 ## Bugs & Assumptions
 
+- **Note:**
+   - The project runs perfectly with the python version 3.10 as of now with out any issues.
+
 - **Bugs:**
   - Ensure the `main.py` functions correctly identify and redact all instances of personal information. There may be edge cases where data is not detected or redacted.
 
@@ -173,21 +176,21 @@ Our project employs Pytest, a powerful testing framework for Python, to ensure t
 
 ### Test Suite Overview
 
-1. **`test_extract_dates`**: This test verifies that the `dates` function in the `main` module correctly extracts date entities from the provided text. The test checks if the number of dates extracted matches the expected count.
+1. **`test_dates.py`**: This file is a pytest module for testing a function in `assignment1.main` that extracts dates from a text. It includes a fixture providing a sample text about two events. The test function `test_extract_dates` checks if the `dates` function from `main` correctly identifies and extracts two dates from the provided text.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/dates.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/016c047c-7ab6-462c-a705-910577733051)
 
-2. **`test_extract_names`**: This test checks the `names` function in the `main` module to ensure it accurately identifies and extracts names from the text. It asserts that the length of the returned name list is as expected.
+2. **`test_names.py`**: This file is a pytest module for testing a function in `assignment1.main` that extracts names from a text. It includes a fixture that provides a sample text about two events. The test function `test_extract_names` evaluates if the `names` function from `main` correctly identifies and extracts two names from the provided text.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/names.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/a65f96dc-b7dc-41fb-a27d-72bc6eb31f1c)
 
-3. **`test_extract_phone`**: This function tests the `phones` function in the `main` module, ensuring it can extract phone numbers from the text. The test validates that the count of extracted phone numbers aligns with the anticipated number.
+3. **`test_phones.py`**: The code is a pytest module for testing a function in `assignment1.main` that extracts phone numbers from a text. It includes a fixture providing a sample text about two events. The test function `test_extract_phone` checks if the `phones` function from `main` correctly identifies that there are no phone numbers in the provided text, expecting an empty list of phone numbers.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/phones.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/e1c88359-344a-4179-a397-1569e50f719f)
 
-4. **`test_extract_address`**: This test ensures that the `addresses` function in the `main` module effectively identifies and extracts addresses from the text. It checks if the number of addresses extracted is correct.
+4. **`test_address.py`**: The file is a pytest module for testing a function in `assignment1.main` that extracts addresses from a text. It includes a fixture providing a sample text about two events. The test function `test_extract_address` checks if the `addresses` function from `main` correctly identifies and extracts a single address from the provided text.
 
-![SS6](https://github.com/sadam456/cis6930sp24-assignment1/blob/main/docs/address.png)
+![SS6](https://github.com/Sayini-16/cis6930sp24-assignment1/assets/81869410/2b1f4be9-fcc9-4177-946d-48bb51cc76c4)
 
 
 ### Running the Tests
