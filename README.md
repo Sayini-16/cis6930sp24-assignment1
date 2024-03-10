@@ -146,7 +146,7 @@ Additional flags are used to indicate which types of sensitive information shoul
 ## Bugs & Assumptions
 
 - **Note:**
-   - The project runs perfectly with the python version 3.10 as of now with out any issues.
+   - The project runs perfectly with the python version 3.10 as of now without any issues.
 
 - **Bugs:**
   - Ensure the `main.py` functions correctly identify and redact all instances of personal information. There may be edge cases where data is not detected or redacted.
