@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+distlib = "==0.3.8"
+filelock = "==3.13.1"
+packaging = "==23.2"
+pipenv = "==2023.11.17"
+pymupdf = "==1.23.21"
+pymupdfb = "==1.23.9"
+pytz = "==2023.3.post1"
+urllib3 = "==2.1.0"
+wcwidth = "==0.2.9"
+spacy = "==3.7.4"
+snorkel = "*"
+commonregex-improved = "*"
+tabulate = "*"
+spacy-download = "*"
+commonregex = "*"
+nltk = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

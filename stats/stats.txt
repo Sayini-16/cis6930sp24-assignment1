@@ -1,0 +1,18 @@
+Status for the file 2.txt
+The following number of names are redacted from the file 4 
+The following number of dates are redacted from the file 2 
+The following number of addresses are redacted from the file 5 
+The following number of phones are redacted from the file 2 
+The total number of redactions in the file are 13 
+Status for the file 5.txt
+The following number of names are redacted from the file 4 
+The following number of dates are redacted from the file 3 
+The following number of addresses are redacted from the file 3 
+The following number of phones are redacted from the file 2 
+The total number of redactions in the file are 12 
+Status for the file email.txt
+The following number of names are redacted from the file 2 
+The following number of dates are redacted from the file 2 
+The following number of addresses are redacted from the file 0 
+The following number of phones are redacted from the file 2 
+The total number of redactions in the file are 6 
