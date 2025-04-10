@@ -1,4 +1,3 @@
-## Assignment 1 - CIS 6930 Spring 2024 
 
 ## Author: Anirudh Sayini
 
